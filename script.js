@@ -6,7 +6,7 @@
 # HOF=>Higher Order Function
 # HOC=>Higher Order Component
 
-==> Map (We need to pass a function)
+==> Map:It iterates/transforms over each and every element in array and produces new array. (We need to pass a function)
 
 # example 1:-
 
@@ -54,7 +54,9 @@ const arr = [4, 3, 1, 2, 5];
 const output = arr.filter((x) => x>3);
 console.log(output);
 
-==> Reduce()
+==> Reduce:It is generally used when we have to take all the array elements and
+print a single value. example: greatest number in an array.
+
 arrayname.reduce(function(accumlator,current value)=>{},[initial value])
 
 # example 1:-
@@ -119,19 +121,6 @@ const ageConName = arr.filter(x => x.age<70).map(x=>x.firstName)
 console.log(ageConName); //[ 'Kamal', 'Donalt', 'Ajith' ]
 
 */
-
-
-
-const arr = [
-    { firstName: "Kamal", lastName: "Hasan", age: 60 },
-    { firstName: "Donalt", lastName: "trump", age: 60 },
-    { firstName: "Rajini", lastName: "kanth", age: 70 },
-    { firstName: "Ajith", lastName: "Kumar", age: 40 },
-];
-
-const ageConName = arr.filter(x => x.age < 70).map(x => x.firstName);
-
-console.log(ageConName); //[ 'Kamal', 'Donalt', 'Ajith' ]
 
 
 
