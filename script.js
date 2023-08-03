@@ -33,6 +33,9 @@ console.log(output);
 
 const arr = [1, 2, 3, 4, 5]; //[2,4,6,8,10]
 
+const output = arr.map((x)=>x*2);
+console.log(output);
+
 //when there is only one line in function which return something
 ==>filter (it simply filters value from array)
 
