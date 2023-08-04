@@ -1,0 +1,129 @@
+                            Day-14 Classes & Oops
+
+1.Template Literals (` `)
+
+var a = 25;
+var b = 10;
+console.log(`The sum of a:${a} and b:${b} is ${a+b}`);
+
+2. this keyword
+=> refers to the particular object
+=> its pin point to nearest object
+
+const car1 = {
+    brand: "Hyundai",
+    model: "i20",
+    color: "black",
+    year: "2022",
+    drive: function () {
+        console.log(`you drive the ${this.brand}`);
+    }
+};
+
+const car2 = {
+    brand: "Volvo",
+    model: "x90",
+    color: "blue",
+    year: "2023",
+    drive: function () {
+        console.log(`you drive the ${this.brand}`);
+    }
+};
+
+car1.drive();
+car2.drive();
+
+3.Classes
+=> A blueprint of creating object. Its defines properties and methods.
+
+syntax:
+
+class ClassName{  //className should start with caps
+
+}
+
+Ex:
+
+class Car {
+    drive() {
+        console.log("driving car");
+    }
+    brake() {
+        console.log("apply brake");
+    }
+}
+//we are creating a car object using car class
+let car = new Car();
+car.drive();
+car.brake();
+
+4.Constructor
+=>A special method for assigning properties
+=>Automatically called when class created
+
+ex:
+
+class Car {
+    constructor(brand, model, color, year) {
+        this.brand = brand; // this keyword points to constractor
+        this.model = model;
+        this.color = color;
+        this.year = year;
+    }
+
+    drive() {
+        console.log("driving car");
+    }
+    brake() {
+        console.log("apply brake");
+    }
+}
+
+let car1 = new Car("Volvo", "x90", "Blue", 2025);
+let car2 = new Car("Audi", "xx7", "Black", 2024);
+
+console.log(car1)
+console.log(car1.brand);
+console.log(car1.color);
+console.log(car1.model);
+
+5.Getter and setter
+getter - get user data
+binds an object property to function when property is accepted
+
+setter - set user data
+binds an object property to function when property is assigned
+
+ex:
+
+const users = {
+    get name() {
+        console.log("getting a name")
+        return this._name;
+    },
+    set name(n) {
+        console.log(`setting a name ${n}`)
+        this._name = n;
+    }
+};
+
+users.name = "pranav";
+console.log(users.name)
+
+==>using class
+
+class Car{
+    constructor(power) {
+        this._power = power;
+    }
+    get power() {
+        return `${this._power}hp`
+    }
+    set power(n) {
+        return `${this._power=n}`
+    }
+}
+
+let car = new Car(500);
+console.log(car);
+console.log(car.power);
