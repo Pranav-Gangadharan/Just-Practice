@@ -227,3 +227,49 @@ Answer:
     total time complexity, T(N) = 1 + N * (N + 1) / 2.
                                 = N * N
                                 = O(N^2)
+
+
+
+let i, j, k=0;
+for(i=n/2;i<=n; i++){
+    for(j=2;j<=n;j=j*2){
+        k=k+n/2;
+    }
+}
+
+1. Make some assumptions for N
+
+
+    N = 5
+        i = 2.5, j = 2, 4 => 2 times
+        i = 3.5, j = 2, 4 => 2 times
+        i = 4.5, j = 2, 4 => 2 times
+
+        total executions = 2 + 2 + 2
+                         = 6
+
+     N = 6
+        i = 3, j = 2, 4 => 2 times
+        i = 4, j = 2, 4 => 2 times
+        i = 5, j = 2, 4 => 2 times
+        i = 6, j = 2, 4 => 2 times
+
+        total executions = 2 + 2 + 2 + 2 
+                         = 8
+
+
+    N = 7
+
+        i = 3.5, j = 2, 4 => 2 times
+        i = 4.5, j = 2, 4 => 2 times
+        i = 5.5, j = 2, 4 => 2 times
+        i = 6.5, j = 2, 4 => 2 times
+
+        total executions = 2 + 2 + 2 + 2 
+                         = 8
+
+2. Summarize & pattern identification
+
+    For N = 5, executions = 6
+    For N = 6, executions = 8
+    For N = 7, executions = 8
